@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="header-container">
+    <h1>Angular 13 Chess Board</h1>
+    <button (click)="rotateBoard()">Flip Board</button>
+  </div>
+  <div class="chess-board">
+    <div *ngFor="let row of letters; let r = index">
+      <div
+        class="chess-board-cell"
+        *ngFor="let col of numbers; let c = index"
+        (click)="selectCell(row, col)"
+        [ngClass]="(r + c) % 2 == 1 ? 'black-board-cell' : 'white-board-cell'"
+      >
+        <div [id]="row + col" class="chess-board-cell-inner">
+          <p
+            class="chess-piece"
+            *ngIf="getPieceCodes(row, col) !== ''"
+            [innerHTML]="getPieceCodes(row, col)"
+          ></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

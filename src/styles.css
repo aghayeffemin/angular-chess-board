@@ -1,0 +1,38 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  flex-direction: column;
+}
+
+button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.header-container {
+  width: 100%;
+  text-align: center;
+}
+
+.header-container h1 {
+  font-size: 25px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #769656, red);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
